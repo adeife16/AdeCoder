@@ -15,6 +15,7 @@ canvas {
     display: flex;
     flex-direction: row!;
     flex-wrap: nowrap;
+    text-align: center;
 }
 .intro-pic{
     width: 200px;
