@@ -1,15 +1,18 @@
-body,
-html {
+body{
     margin: 0;
     padding: 0;
-    position: fixed;
+    /* position: fixed; */
     background-image: url('../img/background.jpg');
-    background-size: cover;
+    background-size: contain;
     color: rgba(255, 255, 255, 0.6);
 }
 
 canvas {
     filter: blur(1px);
+    z-index: 1;
+}
+.content{
+    z-index: 10;
 }
 .intro{
     display: flex;
@@ -21,5 +24,5 @@ canvas {
     margin: 0 auto;
     width: 200px;
     height: 200px;
-    border-radius: 50px;
+    border-radius: 100px;
 }
