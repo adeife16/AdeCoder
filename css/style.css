@@ -5,8 +5,19 @@ html {
     position: fixed;
     background-image: url('../img/background.jpg');
     background-size: cover;
+    color: rgba(255, 255, 255, 0.6);
 }
 
 canvas {
     filter: blur(1px);
+}
+.intro{
+    display: flex;
+    flex-direction: row!;
+    flex-wrap: nowrap;
+}
+.intro-pic{
+    width: 200px;
+    height: 200px;
+    border-radius: 50px;
 }
