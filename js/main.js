@@ -1,88 +1,50 @@
-let c = init("canvas");
-w = canvas.width = window.innerWidth;
-h = canvas.height = window.innerHeight;
-// initiation
+const FIREFLIES = 10;
+const maxHeight = 600;
+const maxWidth = 1200;
 
-class firefly {
-  constructor() {
-    this.x = Math.random() * w;
-    this.y = Math.random() * h;
-    this.s = Math.random() * 2;
-    this.ang = Math.random() * 2 * Math.PI;
-    this.v = (this.s * this.s) / 4;
-  }
-  move() {
-    this.x += this.v * Math.cos(this.ang);
-    this.y += this.v * Math.sin(this.ang);
-    this.and += (Math.random() * 20 * Math.PI) / 180 - (10 * Math.PI) / 180;
-  }
-  show() {
-    c.beginPath();
-    c.arc(this.x, this.y, this.s, 0, 2 * Math.PI);
-    c.fillStyle = "#fddba3";
-    c.fill();
-  }
+const random = (min, max) => {
+    return Math.floor(Math.random() * ( max - min ) + min);
 }
-let f = [];
-
-function draw() {
-  if (f.length < 100) {
-    for (let j = 0; j < 10; j++) {
-      f.push(new firefly());
-    }
-  }
-  //animation
-  for (let i = 0; i < f.length; i++) {
-    f[i].move();
-    f[i].show();
-    if (f[i].x < 0 || f[i].x > w || f[i].y < 0 || f[i].y > h) {
-      f.splice(i, 1);
-    }
-  }
+for(var i = 0; i < FIREFLIES; i++) {
+    let div = document.createElement('div');
+    div.setAttribute('class', 'firefly');
+    document.body.appendChild(div);
 }
+var fireflies = document.querySelectorAll('.firefly');
+for(var i = 0; i < FIREFLIES; i++) {
+    let ix = random(-10, maxWidth+10);
+    let fx = random(-10, maxWidth+10);
+    
+    let iy = random(-10, maxHeight+10);
+    let fy = random(-10, maxHeight+10);
 
-let mouse = {};
-let last_mouse = {};
-
-canvas.addEventListener(
-  "mouseover",
-  function (e) {
-    last_mouse.x = mouse.x;
-    last_mouse.y = mouse.y;
-
-    mouse.x = e.pageX - this.offsetLeft;
-    mouse.y = e.pageY - this.offsetTop;
-  },
-  false
-);
-
-function init(elemid) {
-  let canvas = document.getElementById(elemid),
-    c = canvas.getContext("2d"),
-    w = (canvas.width = window.innerWidth),
-    h = (canvas.height = window.innerHeight);
-  c.fillStyle = "rgba(30, 30, 30, 1)";
-  c.fillRect(0, 0, w, h);
-  return c;
-}
-window.requestAnimationFrame = function () {
-  return (
-    window.requestAnimationFrame ||
-    function (callback) {
-      window.setTimeout(callback);
-    }
-  );
+    gsap.fromTo(fireflies[i], {
+        x: ix,
+        y: iy,
+    }, {
+        x: fx,
+        y: fy,
+        duration: random(5, 15),
+        // ease: "slow (0.7, 0.7, false)",
+        ease: "rough ({template: none.out, strength: 1, points: 20, taper: 'none', randomize: true, clamp:false})",
+        repeat: -1,
+        yoyo: true,
+    });
+    gsap.fromTo(fireflies[i], {
+        boxShadow: "0 0 0 0px rgba(154, 205, 50, 0)"
+    }, {
+        boxShadow: "0 0 0 3px rgba(154, 205, 50, 0.4)",
+        duration: random(2, 4),
+        ease: "slow (0.7, 0.7, false)",
+        repeat: -1,
+        yoyo: true,
+    });
+    gsap.fromTo(fireflies[i], {
+        opacity: 0,
+    }, {
+        duration: random(1, 5),
+        opacity: 0.9,
+        repeat: -1,
+        yoyo: true,
+    })
 };
-
-function loop() {
-  window.requestAnimationFrame(loop);
-  c.clearRect(0, 0, w, h);
-  draw();
-}
-window.addEventListener("resize", function () {
-  (w = canvas.width = window.innerWidth),
-    (h = canvas.height = window.innerHeight);
-  loop();
-});
-loop();
-setInterval(loop, 1000 / 60);
