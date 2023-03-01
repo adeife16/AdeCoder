@@ -1,6 +1,6 @@
-const FIREFLIES = 10;
-const maxHeight = 600;
-const maxWidth = 1200;
+const FIREFLIES = 50;
+const maxHeight = 1020;
+const maxWidth = 1366;
 
 const random = (min, max) => {
     return Math.floor(Math.random() * ( max - min ) + min);
