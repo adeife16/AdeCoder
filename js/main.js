@@ -42,9 +42,7 @@ for(var c = 0; c < colors.length; c++){
             yoyo: true,
         });
         gsap.fromTo(fireflies[i], {
-            boxShadow: "0 0 0 0px rgba(154, 205, 50, 0)"
         }, {
-            boxShadow: "0 0 0 3px rgba(154, 205, 50, 0.4)",
             duration: random(2, 4),
             ease: "slow (0.7, 0.7, false)",
             repeat: -1,
