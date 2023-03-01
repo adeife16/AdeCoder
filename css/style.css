@@ -25,9 +25,11 @@ body, html {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
+    text-align: center;
   }
   .intro-pic{
     width: 200px;
     height: 200px;
     border-radius: 100%;
+    margin: 0 auto;
   }
