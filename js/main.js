@@ -6,9 +6,18 @@ const random = (min, max) => {
     return Math.floor(Math.random() * ( max - min ) + min);
 }
 for(var i = 0; i < FIREFLIES; i++) {
-    // let div = document.createElement('div');
-    // div.setAttribute('class', 'firefly');
-    document.getElementsByClassName('canvas').append('<div class="firefly" ><div>');
+// Get the canvas element
+const canvas = document.querySelector('.canvas');
+
+// Create a new div element
+const firefly = document.createElement('div');
+
+// Add the class name 'firefly' to the new div element
+firefly.classList.add('firefly');
+
+// Insert the new div element into the canvas element
+canvas.appendChild(firefly);
+
 
 }
 var fireflies = document.querySelectorAll('.firefly');
