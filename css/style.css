@@ -1,11 +1,13 @@
 body, html {
     height: 100%;
-    background-image: url("../img/bg-small.jpg");
+    /* background-image: url("../img/bg-small.jpg"); */
+    background-color: #01020e;
     /* Center and scale the image nicely */
     background-position: center;
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat; */
+    background-repeat: repeat;
     background-size: cover;
-    overflow: hidden;
+    /* overflow: hidden; */
     color: rgba(255, 255, 255, 0.6);
   }
   a{
@@ -19,14 +21,59 @@ body, html {
   * {
     box-sizing: border-box;
   }
-  .firefly {
-      width: 2px;
-      height: 2px;
+  .flex{
+    display: flex;
+  }
+  .yellow {
+      width: 10px;
+      height: 10px;
       background: yellow;
       border-radius: 50%;
-      box-shadow: 0 0 0 5px rgba(154, 205, 50, 0.4);
+      border: 0;
+      outline: 0;;
+      /* box-shadow: 0 0 0 5px rgba(154, 205, 50, 0.4); */
       overflow: hidden;
   }
+  .blue {
+    width: 10px;
+    height: 10px;
+    background: rgb(43, 0, 255);
+    border-radius: 50%;
+    border: 0;
+    outline: 0;;
+    /* box-shadow: 0 0 0 5px rgba(154, 205, 50, 0.4); */
+    overflow: hidden;
+}
+.red {
+  width: 10px;
+  height: 10px;
+  background: rgb(255, 0, 0);
+  border-radius: 50%;
+  border: 0;
+  outline: 0;;
+  /* box-shadow: 0 0 0 5px rgba(154, 205, 50, 0.4); */
+  overflow: hidden;
+}
+.green {
+  width: 10px;
+  height: 10px;
+  background: rgb(0, 255, 68);
+  border-radius: 50%;
+  border: 0;
+  outline: 0;;
+  /* box-shadow: 0 0 0 5px rgba(154, 205, 50, 0.4); */
+  overflow: hidden;
+}
+.purple {
+  width: 10px;
+  height: 10px;
+  background: rgb(158, 0, 194);
+  border-radius: 50%;
+  border: 0;
+  outline: 0;;
+  /* box-shadow: 0 0 0 5px rgba(154, 205, 50, 0.4); */
+  overflow: hidden;
+}
   .content{
     position: relative;
     z-index: 99;
