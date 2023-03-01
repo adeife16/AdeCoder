@@ -9,7 +9,11 @@ body, html {
     overflow: hidden;
     color: rgba(255, 255, 255, 0.6);
   }
-  
+  a{
+    text-decoration: none;
+    font-weight: bold;
+    color: rgba(147,186,147,0.5);
+  }
   * {
     box-sizing: border-box;
   }
@@ -45,4 +49,8 @@ body, html {
     width: 100%;
     background: rgba(0, 0, 0, 0);
     z-index: 1;
+  }
+  .btns{
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: 1px 1px 1px 3px rgba(147,186,147,0.5);
   }
