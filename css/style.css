@@ -21,6 +21,9 @@ body, html {
       box-shadow: 0 0 0 5px rgba(154, 205, 50, 0.4);
       overflow: hidden;
   }
+  .content{
+    z-index: 99;
+  }
   .intro{
     display: flex;
     flex-direction: column;
@@ -32,4 +35,14 @@ body, html {
     height: 200px;
     border-radius: 100%;
     margin: 0 auto;
+  }
+  .canvas{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: table;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0);
+    z-index: 1;
   }

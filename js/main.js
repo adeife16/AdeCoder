@@ -8,7 +8,7 @@ const random = (min, max) => {
 for(var i = 0; i < FIREFLIES; i++) {
     let div = document.createElement('div');
     div.setAttribute('class', 'firefly');
-    document.body.appendChild(div);
+    $('.canvas').appendChild(div);
 }
 var fireflies = document.querySelectorAll('.firefly');
 for(var i = 0; i < FIREFLIES; i++) {
