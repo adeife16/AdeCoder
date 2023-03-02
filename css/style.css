@@ -76,6 +76,8 @@ body, html {
   overflow: hidden;
 }
   .content{
+    display: flex;
+    flex-direction: column;
     position: relative;
     z-index: 99;
   }
