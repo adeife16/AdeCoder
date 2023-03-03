@@ -86,7 +86,7 @@ body, html {
     flex-direction: column;
     flex-wrap: nowrap;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.271);
+    background-color: rgba(0, 0, 0, 0.3);
   }
   .intro-pic{
     max-width: 200px;
