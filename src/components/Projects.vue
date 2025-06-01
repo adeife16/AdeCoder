@@ -61,47 +61,48 @@ import madiavo from "../assets/projects/madiavo.png";
 import presc from "../assets/projects/presc.png";
 import flash from "../assets/projects/flash-transfer.png";
 import horace from "../assets/projects/horace.png";
+
 const projects = [
   {
     title: "Meta Lead Hunter",
     description:
       "A lead generation and management platform for Meta Ads. Built with NextJs, Laravel and MySQL. I worked the database structure and the backend API.",
     image: meta_lead_hunter,
-    link: "https://your-portfolio-link.com",
+    link: "https://github.com/adeife16/meta-lead-hunter-backend",
   },
   {
     title: "Streat",
     description:
       "Streat is a transparent, intuitive, and high-quality platform for managing and sharing recipes, leveraging structured data and AI for import, analysis, and community interaction. I worked on the api integration using Nextjs. The backend was built using Python FastAPI and Postgres.",
     image: streat,
-    link: "https://startup-site.com",
+    link: "https://github.com/adeife16/streat-frontend",
   },
   {
     title: "Madiavo",
     description:
       "Madiavo is a full-featured customer relationship management app built with Laravel and Nextjs, supporting multi-role access, reports, leads, and more.",
     image: madiavo,
-    link: "https://crm-app-link.com",
+    link: "https://github.com/adeife16/madiavo-v2",
   },
   {
     title: "Presc",
     description:
       "Presc is a prescription management platform built with React, Nodejs and Postgres, supporting multi-role access, prescription management and clinical reports.",
     image: presc,
-    link: "https://school-system.com",
+    link: "https://github.com/adeife16/Presc",
   },
   {
     title: "Flash Transfer",
     description:
       "Flash Transfer is a ctyptocurency exchange platform built with Nextjs, Nodejs and MySQL. It features crypto currency exchange, non-custodial wallet management, and user management.",
     image: flash,
-    link: "https://school-system.com",
+    link: "https://github.com/adeife16/flash-transfer",
   },
   {
     title: "Horace",
     description: "Horace is a multi-school management platform built with Nuxt3, Nodejs and MySQL. IT supports multi-role access, school management, student management, teacher management, report generation, online exam management, and more.",
     image: horace,
-    link: "https://school-system.com",
+    link: "https://github.com/adeife16/Horace-v2",
   }
 ];
 </script>
