@@ -1,5 +1,8 @@
 <template>
-  <section class="py-20 px-6 bg-secondary dark:bg-gray-900 text-white" id="projects">
+  <section
+    class="py-20 px-6 bg-secondary dark:bg-gray-900 text-white"
+    id="projects"
+  >
     <div class="max-w-6xl mx-auto">
       <h2
         class="text-3xl font-bold mb-12 text-center text-primary font-display"
@@ -100,9 +103,10 @@ const projects = [
   },
   {
     title: "Horace",
-    description: "Horace is a multi-school management platform built with Nuxt3, Nodejs and MySQL. IT supports multi-role access, school management, student management, teacher management, report generation, online exam management, and more.",
+    description:
+      "Horace is a multi-school management platform built with Nuxt3, Nodejs and MySQL. IT supports multi-role access, school management, student management, teacher management, report generation, online exam management, and more.",
     image: horace,
     link: "https://github.com/adeife16/Horace-v2",
-  }
+  },
 ];
 </script>

@@ -1,7 +1,7 @@
 <template>
   <section class="py-20 px-6 bg-light dark:bg-dark" id="skills">
     <div class="max-w-5xl mx-auto text-center">
-      <h2 class="text-3xl font-bold text-primary mb-10">Skills</h2>
+      <h2 class="text-3xl font-bold text-primary mb-10">Skills and Tools</h2>
 
       <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
         <div
